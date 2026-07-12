@@ -22,7 +22,7 @@ export function PricingPage() {
         {/* Header Title */}
         <div className="space-y-3">
           <h1 className="font-heading text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground">
-            API Quotas & Usage Tiers
+            Usage Quotas & Limits
           </h1>
           <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">
             Get started for free, then request sachet quota extensions as your business operation expands.

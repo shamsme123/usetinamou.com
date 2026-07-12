@@ -128,9 +128,9 @@ export function LandingPage() {
 
       {/* Pricing Preview */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-6">
-        <h2 className="font-heading text-3xl font-bold text-foreground">API Quotas & Usage Tiers</h2>
+        <h2 className="font-heading text-3xl font-bold text-foreground">Usage Quotas & Limits</h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Free sessions are capped to safeguard AI APIs. Request rate limit extensions as needed.
+          Free sessions are capped to protect infrastructure limits. Request rate limit extensions as needed.
         </p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6 text-left">
           {/* Sandbox Tier */}

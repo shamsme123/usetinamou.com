@@ -78,7 +78,7 @@ export function UpgradeModal({ open, onClose }: Props) {
             Sandbox Quota Reached
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm">
-            Free sandbox runs are capped to protect API infrastructure limits. Request rate limit extensions below.
+            Free sandbox runs are capped to protect infrastructure limits. Request rate limit extensions below.
           </DialogDescription>
         </DialogHeader>
 

@@ -10,15 +10,15 @@ export function ContactPage() {
       <div className="border border-white/10 rounded-2xl p-6 glass max-w-md mx-auto space-y-4">
         <div>
           <span className="text-xs text-muted-foreground uppercase tracking-wider block font-semibold">Support Email</span>
-          <a href="mailto:support@solacegrandi.com" className="text-primary hover:underline font-medium text-base">
-            support@solacegrandi.com
+          <a href="mailto:support@usetinamou.com" className="text-primary hover:underline font-medium text-base">
+            support@usetinamou.com
           </a>
         </div>
 
         <div>
-          <span className="text-xs text-muted-foreground uppercase tracking-wider block font-semibold">Corporate Office</span>
+          <span className="text-xs text-muted-foreground uppercase tracking-wider block font-semibold">Creator</span>
           <p className="text-foreground font-medium text-sm">
-            Solace Grandi Technologies<br />
+            Shams Mahboob Islam<br />
             Kolkata, West Bengal, India
           </p>
         </div>

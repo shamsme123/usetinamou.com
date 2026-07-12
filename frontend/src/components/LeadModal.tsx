@@ -18,9 +18,10 @@ const USE_CASES = [
 type Props = {
   open: boolean
   onComplete: (email: string, remaining: number) => void
+  onClose?: () => void
 }
 
-export function LeadModal({ open, onComplete }: Props) {
+export function LeadModal({ open, onComplete, onClose }: Props) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [useCase, setUseCase] = useState('')
@@ -51,10 +52,10 @@ export function LeadModal({ open, onComplete }: Props) {
   }, [name, email, useCase, consent, onComplete])
 
   return (
-    <Dialog open={open}>
-      <DialogContent className="sm:max-w-md glass border-white/10 bg-card">
+    <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onClose && onClose()}>
+      <DialogContent className="sm:max-w-md glass bg-card">
         <DialogHeader className="space-y-2">
-          <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center mb-1">
+          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-1">
             <span className="text-xl">🪶</span>
           </div>
           <DialogTitle className="font-heading text-xl text-foreground">
@@ -72,7 +73,7 @@ export function LeadModal({ open, onComplete }: Props) {
               placeholder="e.g. Raj Sharma"
               value={name}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
-              className="bg-secondary/50 border-white/10 focus:border-primary/60"
+              className="bg-secondary/40 border-border focus:border-primary/60"
             />
           </div>
 
@@ -83,17 +84,17 @@ export function LeadModal({ open, onComplete }: Props) {
               placeholder="you@business.com"
               value={email}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-              className="bg-secondary/50 border-white/10 focus:border-primary/60"
+              className="bg-secondary/40 border-border focus:border-primary/60"
             />
           </div>
 
           <div className="space-y-1.5">
             <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Business Type</label>
             <Select onValueChange={(val) => setUseCase(val as string)}>
-              <SelectTrigger className="bg-secondary/50 border-white/10">
+              <SelectTrigger className="bg-secondary/40 border-border">
                 <SelectValue placeholder="Select your business type" />
               </SelectTrigger>
-              <SelectContent className="bg-card border-white/10">
+              <SelectContent className="bg-card border-border">
                 {USE_CASES.map((u) => (
                   <SelectItem key={u.value} value={u.value}>{u.label}</SelectItem>
                 ))}
@@ -109,7 +110,7 @@ export function LeadModal({ open, onComplete }: Props) {
                 onChange={(e) => setConsent(e.target.checked)}
                 className="sr-only"
               />
-              <div className={`w-4 h-4 rounded border transition-all ${consent ? 'bg-primary border-primary' : 'border-white/20 bg-secondary/50'}`}>
+              <div className={`w-4 h-4 rounded border transition-all ${consent ? 'bg-primary border-primary' : 'border-border bg-secondary/40'}`}>
                 {consent && <svg className="w-3 h-3 text-white mx-auto mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>}
               </div>
             </div>

@@ -165,7 +165,7 @@ export function ProductCsvPage() {
   return (
     <div className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 animate-fade-up">
       {/* Lead/Paywall gates */}
-      <LeadModal open={showLeadModal} onComplete={handleLeadComplete} />
+      <LeadModal open={showLeadModal} onComplete={handleLeadComplete} onClose={() => setShowLeadModal(false)} />
       <UpgradeModal open={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -176,7 +176,7 @@ export function ProductCsvPage() {
           </p>
         </div>
         {email && (
-          <Button variant="outline" size="sm" onClick={handleResetUser} className="border-white/10 text-muted-foreground">
+          <Button variant="outline" size="sm" onClick={handleResetUser} className="border-border text-muted-foreground">
             Clear current user configuration
           </Button>
         )}
@@ -185,7 +185,7 @@ export function ProductCsvPage() {
       <div className="grid md:grid-cols-5 gap-8 items-start">
         {/* Left Side Config & Inputs */}
         <div className="md:col-span-2 space-y-6">
-          <Card className="glass border-white/10">
+          <Card className="glass">
             <CardHeader>
               <CardTitle className="font-heading text-lg text-foreground font-semibold">Clean Options</CardTitle>
               <CardDescription className="text-xs">Specify target parameters and configure supplier sheet inputs.</CardDescription>
@@ -194,10 +194,10 @@ export function ProductCsvPage() {
               <div className="space-y-1.5">
                 <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Target Schema</label>
                 <Select value={targetSchema} onValueChange={(val) => setTargetSchema(val as string)}>
-                  <SelectTrigger className="bg-secondary/40 border-white/10">
+                  <SelectTrigger className="bg-secondary/40 border-border">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-card border-white/10">
+                  <SelectContent className="bg-card border-border">
                     <SelectItem value="shopify">Shopify Standard Fields</SelectItem>
                     <SelectItem value="amazon">Amazon Listing Layout</SelectItem>
                     <SelectItem value="generic">Generic Consolidated Columns</SelectItem>
@@ -211,11 +211,11 @@ export function ProductCsvPage() {
                   placeholder="e.g. Handmade ceramic mugs, graphic tees"
                   value={category}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCategory(e.target.value)}
-                  className="bg-secondary/30 border-white/10"
+                  className="bg-secondary/30 border-border"
                 />
               </div>
 
-              <div className="border-t border-white/5 my-4" />
+              <div className="border-t border-border my-4" />
 
               <div className="space-y-3">
                 <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Step 1: Parse Product Table</h4>
@@ -228,7 +228,7 @@ export function ProductCsvPage() {
                     type="file"
                     accept=".csv"
                     onChange={handleFileUpload}
-                    className="bg-secondary/30 border-white/10 text-xs py-1"
+                    className="bg-secondary/30 border-border text-xs py-1"
                   />
                 </div>
 
@@ -241,7 +241,7 @@ export function ProductCsvPage() {
                     placeholder="title,sku,price,color&#10;mug 1,m-01,15.99,blue&#10;mug 2,m-02,17.99,red"
                     value={pastedCsv}
                     onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setPastedCsv(e.target.value)}
-                    className="min-h-[120px] w-full rounded-md border border-white/10 bg-secondary/30 px-3 py-2 text-xs font-mono outline-none"
+                    className="min-h-[120px] w-full rounded-md border border-border bg-secondary/30 px-3 py-2 text-xs font-mono outline-none"
                   />
                   <Button variant="secondary" size="sm" onClick={handleParsePasted} className="w-full text-xs">
                     Parse Pasted Text
@@ -279,7 +279,7 @@ export function ProductCsvPage() {
         {/* Right Side Outputs Grid */}
         <div className="md:col-span-3 space-y-6">
           {loading && (
-            <Card className="glass border-white/10 p-8 space-y-4 text-center">
+            <Card className="glass p-8 space-y-4 text-center">
               <span className="text-3xl animate-bounce inline-block">🪶</span>
               <h3 className="font-heading font-semibold text-lg text-foreground">Normalizing product columns...</h3>
               <Progress value={60} className="h-1 bg-secondary" />
@@ -288,7 +288,7 @@ export function ProductCsvPage() {
           )}
 
           {!loading && !results && (
-            <div className="border-2 border-dashed border-white/5 rounded-2xl p-16 text-center text-muted-foreground space-y-3">
+            <div className="border-2 border-dashed border-border rounded-2xl p-16 text-center text-muted-foreground space-y-3">
               <span className="text-4xl block">📊</span>
               <h3 className="font-heading font-semibold text-foreground">Waiting for normalization</h3>
               <p className="text-xs max-w-xs mx-auto">

@@ -125,7 +125,7 @@ export function OrderParserPage() {
   return (
     <div className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 animate-fade-up">
       {/* Lead/Paywall gates */}
-      <LeadModal open={showLeadModal} onComplete={handleLeadComplete} />
+      <LeadModal open={showLeadModal} onComplete={handleLeadComplete} onClose={() => setShowLeadModal(false)} />
       <UpgradeModal open={showUpgradeModal} onClose={() => setShowUpgradeModal(false)} />
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -136,7 +136,7 @@ export function OrderParserPage() {
           </p>
         </div>
         {email && (
-          <Button variant="outline" size="sm" onClick={handleReset} className="border-white/10 text-muted-foreground">
+          <Button variant="outline" size="sm" onClick={handleReset} className="border-border text-muted-foreground">
             Clear current user configuration
           </Button>
         )}
@@ -145,7 +145,7 @@ export function OrderParserPage() {
       <div className="grid md:grid-cols-5 gap-8 items-start">
         {/* Left Side: pasted order input */}
         <div className="md:col-span-2 space-y-6">
-          <Card className="glass border-white/10">
+          <Card className="glass">
             <CardHeader>
               <CardTitle className="font-heading text-lg text-foreground font-semibold">Messy Order Input</CardTitle>
               <CardDescription className="text-xs">Paste email orders, chat messages, or SMS notes below.</CardDescription>
@@ -154,10 +154,10 @@ export function OrderParserPage() {
               <div className="space-y-1.5">
                 <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Business Niche</label>
                 <Select value={businessType} onValueChange={(val) => setBusinessType(val as string)}>
-                  <SelectTrigger className="bg-secondary/40 border-white/10">
+                  <SelectTrigger className="bg-secondary/40 border-border">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-card border-white/10">
+                  <SelectContent className="bg-card border-border">
                     <SelectItem value="apparel">👗 T-shirt / Custom Apparel</SelectItem>
                     <SelectItem value="bakery">🎂 Bakery & Gift Customizations</SelectItem>
                     <SelectItem value="print">🖨️ Printing & Signage Jobs</SelectItem>
@@ -173,7 +173,7 @@ export function OrderParserPage() {
                   placeholder="Example: Hey, this is Amit. Need 15 red L shirts and 10 white M hoodies by Friday. Send invoice to Amit Fabrics. Deliver to Gurugram."
                   value={orderText}
                   onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setOrderText(e.target.value)}
-                  className="min-h-[220px] bg-secondary/30 border-white/10 font-mono text-sm leading-relaxed"
+                  className="min-h-[220px] bg-secondary/30 border-border font-mono text-sm leading-relaxed"
                 />
               </div>
 
@@ -193,7 +193,7 @@ export function OrderParserPage() {
         {/* Right Side: parsing results outputs */}
         <div className="md:col-span-3 space-y-6">
           {loading && (
-            <Card className="glass border-white/10 p-8 space-y-4 text-center">
+            <Card className="glass p-8 space-y-4 text-center">
               <span className="text-3xl animate-bounce inline-block">🪶</span>
               <h3 className="font-heading font-semibold text-lg text-foreground">Extracting order information...</h3>
               <Progress value={45} className="h-1 bg-secondary" />
@@ -202,7 +202,7 @@ export function OrderParserPage() {
           )}
 
           {!loading && !results && (
-            <div className="border-2 border-dashed border-white/5 rounded-2xl p-16 text-center text-muted-foreground space-y-3">
+            <div className="border-2 border-dashed border-border rounded-2xl p-16 text-center text-muted-foreground space-y-3">
               <span className="text-4xl block">📋</span>
               <h3 className="font-heading font-semibold text-foreground">Waiting for generation</h3>
               <p className="text-xs max-w-xs mx-auto">
@@ -214,7 +214,7 @@ export function OrderParserPage() {
           {results && !loading && (
             <div className="space-y-6">
               {/* Client Info Metadata */}
-              <Card className="glass border-white/10">
+              <Card className="glass">
                 <CardHeader className="py-4">
                   <div className="flex justify-between items-center">
                     <CardTitle className="font-heading text-base text-foreground font-semibold">Extracted Metadata</CardTitle>

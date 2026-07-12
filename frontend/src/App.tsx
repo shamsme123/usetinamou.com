@@ -16,9 +16,6 @@ export default function App() {
 
   // Sync state from localStorage on load & state updates
   useEffect(() => {
-    // Add dark class to body by default to enable dark brand styles
-    document.documentElement.classList.add('dark')
-
     const syncUser = () => {
       const storedEmail = localStorage.getItem('ut_email')
       const storedRemaining = localStorage.getItem('ut_remaining')
@@ -72,7 +69,7 @@ export default function App() {
                 <span className="font-heading font-bold text-sm tracking-tight">UseTinamou.com</span>
               </div>
               <p className="text-xs text-muted-foreground max-w-sm">
-                Built by Solace Grandi Technologies. Turn messy business notes into importable structured spreadsheets instantly.
+                Built by Shams Mahboob Islam. Turn messy business notes into importable structured spreadsheets instantly.
               </p>
             </div>
             
@@ -84,7 +81,7 @@ export default function App() {
             </div>
 
             <p className="text-right text-[10px] text-muted-foreground/60 md:max-w-xs leading-relaxed">
-              © 2026 UseTinamou / Solace Grandi Technologies. All Rights Reserved. Fully proprietary.
+              © 2026 UseTinamou / Shams Mahboob Islam. All Rights Reserved. Fully proprietary.
             </p>
           </div>
         </footer>

@@ -43,9 +43,9 @@ export function UpgradeModal({ open, onClose }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg glass border-white/10 bg-card">
+      <DialogContent className="sm:max-w-lg glass bg-card">
         <DialogHeader className="space-y-2">
-          <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center mb-1">
+          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-1">
             <span className="text-xl">🚀</span>
           </div>
           <DialogTitle className="font-heading text-xl text-foreground">
@@ -62,8 +62,8 @@ export function UpgradeModal({ open, onClose }: Props) {
               key={plan.name}
               className={`rounded-xl p-4 border space-y-3 ${
                 plan.highlight
-                  ? 'border-primary/40 bg-primary/10 glow-violet'
-                  : 'border-white/8 bg-secondary/30'
+                  ? 'border-primary/30 bg-primary/5 glow-violet'
+                  : 'border-border bg-secondary/50'
               }`}
             >
               {plan.highlight && (

@@ -9,6 +9,7 @@ import { TermsPage } from '@/pages/TermsPage'
 import { PrivacyPage } from '@/pages/PrivacyPage'
 import { RefundPage } from '@/pages/RefundPage'
 import { ContactPage } from '@/pages/ContactPage'
+import { PricingPage } from '@/pages/PricingPage'
 
 export default function App() {
   const [email, setEmail] = useState<string | null>(null)
@@ -57,11 +58,12 @@ export default function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/refund" element={<RefundPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
           </Routes>
         </main>
 
         {/* Global Footer (Razorpay / compliance check) */}
-        <footer className="border-t border-white/5 py-12 glass mt-auto bg-background/50">
+        <footer className="border-t border-border py-12 glass mt-auto bg-background/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-left space-y-2">
               <div className="flex items-center gap-2">
@@ -74,6 +76,7 @@ export default function App() {
             </div>
             
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs text-muted-foreground font-medium">
+              <Link to="/pricing" className="hover:text-primary transition-colors">Pricing</Link>
               <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
               <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <Link to="/refund" className="hover:text-primary transition-colors">Refund & Cancellation</Link>

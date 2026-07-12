@@ -39,6 +39,14 @@ export function Navbar({ remainingGenerations, email, onLogout }: Props) {
             >
               CSV Formatter
             </Link>
+            <Link
+              to="/pricing"
+              className={`text-sm font-medium transition-colors hover:text-foreground ${
+                isActive('/pricing') ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+            >
+              Pricing
+            </Link>
           </nav>
         </div>
 

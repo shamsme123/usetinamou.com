@@ -132,28 +132,73 @@ export function LandingPage() {
         <p className="text-muted-foreground max-w-xl mx-auto">
           Free sessions are capped to safeguard AI APIs. Request rate limit extensions as needed.
         </p>
-        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto pt-6">
-          <div className="border border-border rounded-2xl p-6 bg-secondary/20 space-y-4">
-            <h3 className="font-heading text-xl font-bold text-foreground">Sandbox Tier</h3>
-            <p className="text-3xl font-extrabold text-foreground">Free</p>
-            <p className="text-xs text-muted-foreground">15 extraction requests · Max 20 catalog rows</p>
-            <Link to="/order-parser" className="block">
-              <Button className="w-full bg-secondary hover:bg-secondary/80 text-foreground border border-border">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6 text-left">
+          {/* Sandbox Tier */}
+          <div className="border border-border rounded-2xl p-6 bg-secondary/10 space-y-4 flex flex-col justify-between">
+            <div className="space-y-3">
+              <span className="text-[10px] font-semibold bg-secondary text-muted-foreground px-2 py-0.5 rounded-full uppercase">
+                Free
+              </span>
+              <h3 className="font-heading text-xl font-bold text-foreground">Sandbox Tier</h3>
+              <p className="text-3xl font-extrabold text-foreground">₹0</p>
+              <p className="text-xs text-muted-foreground">15 Credits (~75-150 rows estimated)</p>
+              <ul className="text-xs text-muted-foreground space-y-1.5 border-t border-border pt-3">
+                <li>✓ Order Parser sandbox</li>
+                <li>✓ CSV Formatter sandbox</li>
+                <li>✓ Max 20 rows per CSV</li>
+              </ul>
+            </div>
+            <Link to="/order-parser" className="block pt-4">
+              <Button className="w-full bg-secondary hover:bg-secondary/80 text-foreground border border-border text-xs font-semibold">
                 Open Sandbox
               </Button>
             </Link>
           </div>
-          <div className="border border-primary/30 rounded-2xl p-6 bg-primary/5 glow-violet space-y-4 relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-bold py-1 px-3 rounded-bl-xl uppercase">
-              Production
+
+          {/* Sachet Pack */}
+          <div className="border border-border rounded-2xl p-6 bg-secondary/20 space-y-4 flex flex-col justify-between">
+            <div className="space-y-3">
+              <span className="text-[10px] font-semibold bg-accent/20 text-accent px-2 py-0.5 rounded-full uppercase border border-accent/15">
+                Popular
+              </span>
+              <h3 className="font-heading text-xl font-bold text-foreground">Sachet Pack</h3>
+              <p className="text-3xl font-extrabold text-foreground">₹99</p>
+              <p className="text-xs text-muted-foreground">$1.49 USD (one-time quota extension)</p>
+              <ul className="text-xs text-muted-foreground space-y-1.5 border-t border-border pt-3">
+                <li>✓ 50 parsing/formatting runs</li>
+                <li>✓ Mapped Shopify & Amazon templates</li>
+                <li>✓ Standard speed limits</li>
+              </ul>
             </div>
-            <h3 className="font-heading text-xl font-bold text-foreground">Extended Quota</h3>
-            <p className="text-3xl font-extrabold text-foreground">₹8,000</p>
-            <p className="text-xs text-muted-foreground">$99 USD (one-time quota extension fee)</p>
-            <p className="text-xs text-muted-foreground">200 runs/month · Max 50 rows per CSV</p>
-            <Link to="/order-parser" className="block">
-              <Button className="w-full bg-primary hover:bg-primary/95 text-primary-foreground">
-                Request Extended Quota
+            <Link to="/order-parser" className="block pt-4">
+              <Button className="w-full bg-secondary hover:bg-secondary/85 text-foreground border border-border text-xs font-semibold">
+                Get Sachet Pack
+              </Button>
+            </Link>
+          </div>
+
+          {/* Bulk Pack */}
+          <div className="border border-primary/30 rounded-2xl p-6 bg-primary/5 glow-violet space-y-4 flex flex-col justify-between relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[9px] font-bold py-1 px-3 rounded-bl-xl uppercase">
+              Best Value
+            </div>
+            <div className="space-y-3">
+              <span className="text-[10px] font-semibold bg-primary/20 text-primary px-2 py-0.5 rounded-full uppercase border border-primary/10">
+                Bulk
+              </span>
+              <h3 className="font-heading text-xl font-bold text-foreground">Bulk Pack</h3>
+              <p className="text-3xl font-extrabold text-foreground">₹299</p>
+              <p className="text-xs text-muted-foreground">$3.99 USD (one-time quota extension)</p>
+              <ul className="text-xs text-muted-foreground space-y-1.5 border-t border-border pt-3">
+                <li>✓ 200 parsing/formatting runs</li>
+                <li>✓ Priority generation speeds</li>
+                <li>✓ Mapped Shopify & Amazon templates</li>
+                <li>✓ Priority support (under 6 hrs)</li>
+              </ul>
+            </div>
+            <Link to="/order-parser" className="block pt-4">
+              <Button className="w-full bg-primary hover:bg-primary/95 text-primary-foreground text-xs font-semibold">
+                Get Bulk Pack
               </Button>
             </Link>
           </div>

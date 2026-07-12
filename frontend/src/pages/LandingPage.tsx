@@ -44,47 +44,50 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* Workflows Cards */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-8">
-        <Card className="glass relative group overflow-hidden border-white/10">
-          <div className="absolute top-0 left-0 w-full h-[3px] bg-primary/40 group-hover:bg-primary transition-colors" />
-          <CardHeader className="space-y-1">
-            <span className="text-3xl">💬</span>
-            <CardTitle className="font-heading text-2xl text-foreground font-bold">Order Parser</CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Messy WhatsApp texts, SMS, notes, and emails to order tables.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="bg-secondary/40 rounded-xl p-4 text-xs font-mono text-left leading-relaxed text-muted-foreground border border-white/5">
-              "Raj Traders here. Need 15 black XL shirts, 10 blue M, delivery next Tuesday. Bill to Raj Traders."
-            </div>
-            <div className="flex justify-between items-center text-xs font-semibold text-accent">
-              <span>Extracts sizes, counts, shipping & dates</span>
-              <span>➔</span>
-            </div>
-          </CardContent>
-        </Card>
+        <Link to="/order-parser" className="block group">
+          <Card className="glass relative overflow-hidden border-border transition-all duration-300 hover:scale-[1.01] hover:shadow-lg cursor-pointer">
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-primary/40 group-hover:bg-primary transition-colors" />
+            <CardHeader className="space-y-1">
+              <span className="text-3xl">💬</span>
+              <CardTitle className="font-heading text-2xl text-foreground font-bold">Order Parser</CardTitle>
+              <CardDescription className="text-muted-foreground">
+                Messy WhatsApp texts, SMS, notes, and emails to order tables.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="bg-secondary/40 rounded-xl p-4 text-xs font-mono text-left leading-relaxed text-muted-foreground border border-border">
+                "Raj Traders here. Need 15 black XL shirts, 10 blue M, delivery next Tuesday. Bill to Raj Traders."
+              </div>
+              <div className="flex justify-between items-center text-xs font-semibold text-accent">
+                <span>Extracts sizes, counts, shipping & dates</span>
+                <span className="group-hover:translate-x-1 transition-transform">➔</span>
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
 
-        <Card className="glass relative group overflow-hidden border-white/10">
-          <div className="absolute top-0 left-0 w-full h-[3px] bg-accent/40 group-hover:bg-accent transition-colors" />
-          <CardHeader className="space-y-1">
-            <span className="text-3xl">📦</span>
-            <CardTitle className="font-heading text-2xl text-foreground font-bold">Product Formatter</CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Supplier tables and pasted catalog listings to clean marketplace fields.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="bg-secondary/40 rounded-xl p-4 text-xs font-mono text-left leading-relaxed text-muted-foreground border border-white/5">
-              Item description with missing titles, non-matching categories, varying variant columns.
-            </div>
-            <div className="flex justify-between items-center text-xs font-semibold text-accent">
-              <span>Standardizes titles, categories & tags</span>
-              <span>➔</span>
-            </div>
-          </CardContent>
-        </Card>
+        <Link to="/product-csv" className="block group">
+          <Card className="glass relative overflow-hidden border-border transition-all duration-300 hover:scale-[1.01] hover:shadow-lg cursor-pointer">
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-accent/40 group-hover:bg-accent transition-colors" />
+            <CardHeader className="space-y-1">
+              <span className="text-3xl">📦</span>
+              <CardTitle className="font-heading text-2xl text-foreground font-bold">Product Formatter</CardTitle>
+              <CardDescription className="text-muted-foreground">
+                Supplier tables and pasted catalog listings to clean marketplace fields.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="bg-secondary/40 rounded-xl p-4 text-xs font-mono text-left leading-relaxed text-muted-foreground border border-border">
+                Item description with missing titles, non-matching categories, varying variant columns.
+              </div>
+              <div className="flex justify-between items-center text-xs font-semibold text-accent">
+                <span>Standardizes titles, categories & tags</span>
+                <span className="group-hover:translate-x-1 transition-transform">➔</span>
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
       </section>
 
       {/* Competitive Grid VS ChatGPT */}

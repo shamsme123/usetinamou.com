@@ -11,7 +11,7 @@ const PLANS = [
     name: 'Free',
     price: '₹0',
     usd: '$0',
-    limit: '5 generations · 20 rows',
+    limit: '15 generations · 20 rows',
     features: ['Order Parser', 'Product CSV Formatter', 'CSV Export'],
     cta: null,
     current: true,

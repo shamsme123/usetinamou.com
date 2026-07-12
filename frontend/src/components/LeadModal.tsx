@@ -130,11 +130,11 @@ export function LeadModal({ open, onComplete, onClose }: Props) {
             disabled={loading}
             className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium animate-pulse-glow"
           >
-            {loading ? 'Setting up...' : 'Initialize Sandbox — 5 Credits'}
+            {loading ? 'Setting up...' : 'Initialize Sandbox — 15 Credits'}
           </Button>
 
           <p className="text-center text-[11px] text-muted-foreground">
-            Evaluation session · 5 sandbox generations included
+            Evaluation session · 15 sandbox generations included
           </p>
         </div>
       </DialogContent>

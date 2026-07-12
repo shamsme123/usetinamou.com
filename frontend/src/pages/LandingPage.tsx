@@ -19,7 +19,7 @@ export function LandingPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center space-y-8 animate-fade-up">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-secondary/50 backdrop-blur-md">
           <span className="flex h-2 w-2 rounded-full bg-accent" />
-          <span className="text-xs font-medium text-muted-foreground">Sandbox session · 5 free quota runs</span>
+          <span className="text-xs font-medium text-muted-foreground">Sandbox session · 15 free quota runs</span>
         </div>
 
         <h1 className="font-heading text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-[1.1] text-foreground">
@@ -133,7 +133,7 @@ export function LandingPage() {
           <div className="border border-border rounded-2xl p-6 bg-secondary/20 space-y-4">
             <h3 className="font-heading text-xl font-bold text-foreground">Sandbox Tier</h3>
             <p className="text-3xl font-extrabold text-foreground">Free</p>
-            <p className="text-xs text-muted-foreground">5 extraction requests · Max 20 catalog rows</p>
+            <p className="text-xs text-muted-foreground">15 extraction requests · Max 20 catalog rows</p>
             <Link to="/order-parser" className="block">
               <Button className="w-full bg-secondary hover:bg-secondary/80 text-foreground border border-border">
                 Open Sandbox
@@ -146,7 +146,7 @@ export function LandingPage() {
             </div>
             <h3 className="font-heading text-xl font-bold text-foreground">Extended Quota</h3>
             <p className="text-3xl font-extrabold text-foreground">₹8,000</p>
-            <p className="text-xs text-muted-foreground">$99 USD (one-time API key allocation fee)</p>
+            <p className="text-xs text-muted-foreground">$99 USD (one-time quota extension fee)</p>
             <p className="text-xs text-muted-foreground">200 runs/month · Max 50 rows per CSV</p>
             <Link to="/order-parser" className="block">
               <Button className="w-full bg-primary hover:bg-primary/95 text-primary-foreground">

@@ -5,6 +5,7 @@
 [![Backend](https://img.shields.io/badge/Backend-NestJS-E0234E?logo=nestjs)](https://nestjs.com/)
 [![Powered by Anthropic](https://img.shields.io/badge/AI_Engine-Claude_3.5_Haiku-1a1a1a?logo=anthropic)](https://www.anthropic.com/)
 [![Frontend](https://img.shields.io/badge/Frontend-React_|_Vite-61DAFB?logo=react)](https://reactjs.org/)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?logo=githubactions&logoColor=white)](https://github.com/features/actions)
 
 > ⚠️ **Legal Notice:** This repository is public **strictly for portfolio review and educational evaluation** by hiring managers. The code is entirely proprietary. No permission is granted to copy, modify, distribute, or use this codebase for personal or commercial projects. © 2026 Shams Mahboob Islam.
 

@@ -95,6 +95,12 @@
   html {
     @apply font-sans;
   }
+  button,
+  [role="button"],
+  select,
+  a {
+    cursor: pointer !important;
+  }
 }
 
 /* ── Custom utilities ─────────────────────────────────── */

@@ -17,9 +17,9 @@ export function LandingPage() {
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center space-y-8 animate-fade-up">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-secondary/50 backdrop-blur-md">
           <span className="flex h-2 w-2 rounded-full bg-accent" />
-          <span className="text-xs font-medium text-muted-foreground">Free 5 generations for pilot users</span>
+          <span className="text-xs font-medium text-muted-foreground">Sandbox session · 5 free quota runs</span>
         </div>
 
         <h1 className="font-heading text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-[1.1] text-foreground">
@@ -27,18 +27,18 @@ export function LandingPage() {
         </h1>
 
         <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-          OrderSheet AI turns chaotic WhatsApp texts, email lists, and legacy product sheets into clean, structured, downloadable CSV files in seconds.
+          UseTinamou turns chaotic WhatsApp texts, email lists, and legacy product sheets into clean, structured, downloadable CSV files in seconds.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <Link to="/order-parser">
             <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 rounded-xl text-base animate-pulse-glow">
-              Try Order Parser 👕
+              Open Order Parser 👕
             </Button>
           </Link>
           <Link to="/product-csv">
-            <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/15 hover:bg-white/5 text-foreground px-8 py-6 rounded-xl text-base">
-              Try Product Formatter 🛒
+            <Button size="lg" variant="outline" className="w-full sm:w-auto border-border hover:bg-secondary text-foreground px-8 py-6 rounded-xl text-base">
+              Open CSV Formatter 🛒
             </Button>
           </Link>
         </div>
@@ -125,32 +125,32 @@ export function LandingPage() {
 
       {/* Pricing Preview */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-6">
-        <h2 className="font-heading text-3xl font-bold text-foreground">Transparent pricing, validation first</h2>
+        <h2 className="font-heading text-3xl font-bold text-foreground">API Quotas & Usage Tiers</h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          No automated subscriptions initially. Pay via secure payment links once you exceed free limits.
+          Free sessions are capped to safeguard AI APIs. Request rate limit extensions as needed.
         </p>
         <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto pt-6">
-          <div className="border border-white/10 rounded-2xl p-6 bg-secondary/20 space-y-4">
-            <h3 className="font-heading text-xl font-bold text-foreground">Pilot Free</h3>
-            <p className="text-3xl font-extrabold text-foreground">₹0</p>
-            <p className="text-xs text-muted-foreground">5 generations included · Max 20 CSV rows</p>
+          <div className="border border-border rounded-2xl p-6 bg-secondary/20 space-y-4">
+            <h3 className="font-heading text-xl font-bold text-foreground">Sandbox Tier</h3>
+            <p className="text-3xl font-extrabold text-foreground">Free</p>
+            <p className="text-xs text-muted-foreground">5 extraction requests · Max 20 catalog rows</p>
             <Link to="/order-parser" className="block">
-              <Button className="w-full bg-secondary hover:bg-secondary/80 text-foreground border border-white/10">
-                Get Started Free
+              <Button className="w-full bg-secondary hover:bg-secondary/80 text-foreground border border-border">
+                Open Sandbox
               </Button>
             </Link>
           </div>
           <div className="border border-primary/30 rounded-2xl p-6 bg-primary/5 glow-violet space-y-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-bold py-1 px-3 rounded-bl-xl uppercase">
-              Solo
+              Production
             </div>
-            <h3 className="font-heading text-xl font-bold text-foreground">Starter Pack</h3>
+            <h3 className="font-heading text-xl font-bold text-foreground">Extended Quota</h3>
             <p className="text-3xl font-extrabold text-foreground">₹8,000</p>
-            <p className="text-xs text-muted-foreground">$99 USD for global accounts (one-time fee)</p>
-            <p className="text-xs text-muted-foreground">200 generations/month · Max 50 rows per CSV</p>
+            <p className="text-xs text-muted-foreground">$99 USD (one-time API key allocation fee)</p>
+            <p className="text-xs text-muted-foreground">200 runs/month · Max 50 rows per CSV</p>
             <Link to="/order-parser" className="block">
               <Button className="w-full bg-primary hover:bg-primary/95 text-primary-foreground">
-                Get Starter Pack
+                Request Extended Quota
               </Button>
             </Link>
           </div>

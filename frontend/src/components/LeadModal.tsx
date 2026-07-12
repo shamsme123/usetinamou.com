@@ -59,10 +59,10 @@ export function LeadModal({ open, onComplete, onClose }: Props) {
             <span className="text-xl">🪶</span>
           </div>
           <DialogTitle className="font-heading text-xl text-foreground">
-            Let's get you set up
+            Configure Sandbox Session
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm">
-            Enter your details to start generating — free, no credit card needed.
+            Enter your details to initialize your parser sandbox.
           </DialogDescription>
         </DialogHeader>
 
@@ -130,11 +130,11 @@ export function LeadModal({ open, onComplete, onClose }: Props) {
             disabled={loading}
             className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium animate-pulse-glow"
           >
-            {loading ? 'Setting up...' : 'Start Free — 5 Generations'}
+            {loading ? 'Setting up...' : 'Initialize Sandbox — 5 Credits'}
           </Button>
 
           <p className="text-center text-[11px] text-muted-foreground">
-            Free plan · No credit card · 5 generations included
+            Evaluation session · 5 sandbox generations included
           </p>
         </div>
       </DialogContent>

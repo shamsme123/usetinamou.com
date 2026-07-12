@@ -49,10 +49,10 @@ export function UpgradeModal({ open, onClose }: Props) {
             <span className="text-xl">🚀</span>
           </div>
           <DialogTitle className="font-heading text-xl text-foreground">
-            You've hit your free limit
+            Sandbox Quota Reached
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm">
-            Upgrade to keep converting orders and product sheets — no setup required.
+            Free sandbox runs are capped to protect API infrastructure limits. Request rate limit extensions below.
           </DialogDescription>
         </DialogHeader>
 
@@ -91,15 +91,15 @@ export function UpgradeModal({ open, onClose }: Props) {
                     className="w-full bg-primary hover:bg-primary/90 text-xs"
                     onClick={() => handleClick(plan.name + '-INR', RAZORPAY_LINK)}
                   >
-                    Pay ₹8,000 via Razorpay
+                    Simulate INR Upgrade (₹8,000)
                   </Button>
                   <Button
                     size="sm"
                     variant="outline"
-                    className="w-full border-white/10 text-xs"
+                    className="w-full border-border text-xs"
                     onClick={() => handleClick(plan.name + '-USD', PAYPAL_LINK)}
                   >
-                    Pay $99 via PayPal
+                    Simulate USD Upgrade ($99)
                   </Button>
                 </div>
               ) : (
@@ -110,7 +110,7 @@ export function UpgradeModal({ open, onClose }: Props) {
         </div>
 
         <p className="text-center text-[11px] text-muted-foreground pt-2">
-          Manual verification within 24 hours. Questions?{' '}
+          Manual credentials verification within 24 hours. Questions?{' '}
           <a href="/contact" className="text-primary hover:underline">Contact us</a>
         </p>
       </DialogContent>
